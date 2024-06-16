@@ -1,18 +1,218 @@
 $primary-colors:(
     'light-red': hsl(0, 100%, 67%),
-    'orangey-yellow': hsl(39, 100%, 56%),
-    'green-teal': hsl(166, 100%, 37%),
-    'cobalt-blue': hsl(234, 85%, 45%),
+    'yellow': hsl(39, 100%, 56%),
+    'green': hsl(166, 100%, 37%),
+    'blue': hsl(234, 85%, 45%),
 );
 $gradient-colors:(
-    'light-slate-blue(background)': hsl(252, 100%, 67%),
-    'violet-blue(circle)': hsla(256, 72%, 46%, 1),
-    'persian-blue(circle)': hsla(241, 72%, 46%, 0),
+    'light-blue': hsl(252, 100%, 67%),
+    'violet-blue': hsla(256, 72%, 46%, 1),
+    'persian-blue': hsla(241, 72%, 46%, 0),
 
 );
 $neutral-colors:(
     'white': hsl(0, 0%, 100%),
     'pale-blue': hsl(221, 100%, 96%),
-    Light lavender: hsl(241, 100%, 89%),
+    'light-lavender': hsl(241, 100%, 89%),
     'dark-gray-blue': hsl(224, 30%, 27%)
-)
+);
+
+
+
+body{
+    font-family: 'Hanken Grotesk';
+    background-color: map-get($neutral-colors, 'pale-blue' );
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: white;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        width: 840px;
+        margin: auto;
+
+        
+        .first-section{
+            background-color: map-get($gradient-colors, 'light-blue' );
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            #your-result{
+                margin-top: 20px;
+                margin-bottom: 20px;
+                font-weight: 500;
+                color: map-get($neutral-colors, 'light-lavender' );
+            }
+            .some-text{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-weight: 500 ;
+                font-size: small;
+                color: map-get($neutral-colors, 'light-lavender' )
+            };
+            .real-score{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 50%;
+                width: 40%;
+                height: 130px;
+                margin-bottom: 25px;
+                background-color: map-get($gradient-colors, 'violet-blue' );
+                #real-score-1{font-size: 4rem;
+                    font-weight: 800;
+                    margin-top: 7px;
+                    color: white;
+
+                };
+                #real-score-2{
+                    font-size: medium;
+                    font-weight: 500;
+                    color: map-get( $neutral-colors,'pale-blue' )
+                    
+                    
+
+                }
+            };
+            #great{
+                
+                margin-bottom: 10px;
+                font-weight: 700;
+                font-size: 1.2rem;
+                color: white;
+            }
+
+            
+
+        };
+        .last-section{
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            .first-item{
+                font-weight: 700;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                display: flex;
+                justify-content: baseline;
+                margin-bottom: 15px;
+                border-radius: 10px;
+                background-color: rgb(243, 237, 237);
+                .percent-1{
+                    margin-left: 80px;
+                    
+                };
+                #category-1{
+                    margin-left: 10px;
+                    color: map-get($primary-colors, 'light-red' )
+
+                }
+                img{
+                    
+                }
+
+            };
+            .second-item{
+                font-weight: 700;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                display: flex;
+                justify-content: baseline;
+                margin-bottom: 15px;
+                border-radius: 10px;
+                background-color: rgb(247, 245, 243);
+
+                #category-2{
+                    margin-left: 10px;
+                    color: map-get($primary-colors, 'yellow' );
+                }
+                img{
+                    
+                }
+                .percent-2{
+                    margin-left: 80px;
+                }
+            };
+            .third-item{
+                padding-bottom: 10px;
+                padding-top: 10px;
+                display: flex;
+                justify-content: baseline;
+                margin-bottom: 15px;
+                font-weight: 700;
+                border-radius: 10px;
+                background-color: rgb(246, 250, 239);
+                img{
+                    
+                };
+                #category-3{
+                    margin-left: 10px;
+                    color: map-get($primary-colors, 'green' )
+                };
+                .percent-3{
+                    margin-left: 93px;
+                }
+            };
+            .fourth-item{
+                font-weight: 700;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                display: flex;
+                justify-content: baseline;
+                margin-bottom: 15px;
+                padding-top: 10px;
+                border-radius: 10px;
+                background-color: map-get($neutral-colors, 'pale-blue' )
+            };
+                img{
+
+                };
+                #category-4{
+                    margin-left: 10px;
+                    color: map-get($primary-colors, 'blue' );
+                }
+                .percent-4{
+                    margin-left: 95px;
+                }
+            }
+
+            div{
+                margin-left: 8%;
+                margin-right: 8%;
+
+            };
+            button{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 84%;
+                border-radius: 20px;
+                font-weight: 700;
+                font-size: 1.01rem;
+                background-color: map-get($neutral-colors, 'dark-gray-blue');
+                color: map-get($neutral-colors,'light-lavender' );
+                
+                
+                
+            .summary{
+                
+                margin-bottom: 15px;
+                font-size: 1rem;
+                font-weight: 700;
+
+            }
+
+        }
+        
+    }
+    
+};
+
